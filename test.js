@@ -29,12 +29,11 @@ test('benchmark tests', function (t) {
 });
 
 test('metadata tests', function (t) {
-    t.plan(Object.keys(minifiers).length * 3);
+    t.plan(Object.keys(minifiers).length * 2);
 
     Object.keys(minifiers).forEach(function (m) {
         var minifier = minifiers[m];
         t.ok(minifier.version, minifier + ' version ' + minifier.version);
-        t.ok(minifier.url, minifier + ' url ' + minifier.url);
         t.ok('' + minifier, minifier + ' should be cast to string');
     });
 });
