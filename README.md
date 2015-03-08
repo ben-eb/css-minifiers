@@ -80,6 +80,6 @@ MIT © Ben Briggs
 [1]: https://github.com/GoalSmashers/css-minification-benchmark
 [2]: https://github.com/MarkBennett/css-smasher
 
-[ci]:   https://travis-ci.org/ben-eb/colormin
-[deps]: https://gemnasium.com/ben-eb/colormin
-[npm]:  http://badge.fury.io/js/colormin
+[ci]:   https://travis-ci.org/ben-eb/css-minifiers
+[deps]: https://gemnasium.com/ben-eb/css-minifiers
+[npm]:  http://badge.fury.io/js/css-minifiers
