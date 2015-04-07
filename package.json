@@ -15,7 +15,7 @@
   ],
   "author": {
     "name": "Ben Briggs",
-    "email": "therealbenbriggs@hotmail.com",
+    "email": "beneb.info@gmail.com",
     "url": "http://beneb.info"
   },
   "license": "MIT",
@@ -37,9 +37,6 @@
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ben-eb/css-minifiers.git"
-  },
+  "repository": "ben-eb/css-minifiers",
   "homepage": "https://github.com/ben-eb/css-minifiers"
 }
