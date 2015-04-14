@@ -7,8 +7,6 @@
     "test": "tape test.js | tap-spec"
   },
   "keywords": [
-    "color",
-    "colors",
     "compression",
     "css",
     "minify"
@@ -25,6 +23,7 @@
     "crass": "^0.7.x",
     "css-condense": "^0.1.x",
     "csso": "^1.3.x",
+    "cssnano": "^1.0.x",
     "cssshrink": "0.0.x",
     "csswring": "^3.0.x",
     "more-css": "^0.10.x",
