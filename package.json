@@ -1,6 +1,6 @@
 {
   "name": "css-minifiers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "(almost) all CSS minifiers available for node.js",
   "main": "index.js",
   "scripts": {
