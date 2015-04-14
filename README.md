@@ -20,7 +20,7 @@ this engine is too conservative about its parsing, leaving lots of whitespace in
 * [clean-css](https://github.com/jakubpawlowicz/clean-css)
 * [crass](https://github.com/mattbasta/crass)
 * [css-condense](https://github.com/rstacruz/css-condense)
-* [css-nano](https://github.com/ben-eb/cssnano)
+* [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
 * [cssshrink](https://github.com/stoyan/cssshrink)
 * [csswring](https://github.com/hail2u/node-csswring)
