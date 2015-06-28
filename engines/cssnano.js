@@ -1,4 +1,4 @@
 'use strict';
 
 var Engine = require('../engine');
-module.exports = new Engine('cssnano');
+module.exports = new Engine('cssnano', require('cssnano').process);
