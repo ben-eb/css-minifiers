@@ -3,6 +3,12 @@
   "version": "1.1.2",
   "description": "(almost) all CSS minifiers available for node.js",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "engine.js",
+    "engines",
+    "LICENSE-MIT"
+  ],
   "scripts": {
     "test": "tape test.js | tap-spec"
   },
@@ -19,13 +25,13 @@
   "license": "MIT",
   "dependencies": {
     "bulk-require": "^0.2.1",
-    "clean-css": "^3.3.x",
+    "clean-css": "^3.4.x",
     "crass": "^0.7.x",
     "css-condense": "^0.1.x",
     "csso": "^1.3.x",
-    "cssnano": "^2.0.x",
+    "cssnano": "^3.0.x",
     "cssshrink": "0.0.x",
-    "csswring": "^3.0.x",
+    "csswring": "^4.0.x",
     "more-css": "^0.12.x",
     "ncss": "^1.1.x",
     "pretty-hrtime": "^1.0.0",
@@ -33,8 +39,8 @@
     "ycssmin": "^1.0.x"
   },
   "devDependencies": {
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.0"
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.0"
   },
   "repository": "ben-eb/css-minifiers",
   "homepage": "https://github.com/ben-eb/css-minifiers"

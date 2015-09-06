@@ -34,24 +34,31 @@ pull request!
 
 ## Usage
 
-Load all of the minifiers, and then access their compression functions like so:
+Since version 2, all minifiers are wrapped with the Promise API:
 
 ```js
 var minifiers = require('css-minifiers');
 var css = 'h1 { color: #880000; }';
 var csso = minifiers.csso;
 
-console.log(csso(css));
-// => h1{color:#800}
+csso(css).then(function (output) {
+    console.log(output);
+    // => h1{color:#800}
+});
 ```
 
 Get a benchmark compression time:
 
 ```js
-console.log(csso.bench(css));
-// => 1.4 ms
-console.log(csso.bench(css, true));
-// => 1.399856 ms
+csso.bench(css).then(function (output) {
+    console.log(output);
+    // => 1.4 ms
+});
+
+csso.bench(css, true).then(function (output) {
+    console.log(output);
+    // => 1.399856 ms
+});
 ```
 
 The version number & homepage for the engine are also exposed:

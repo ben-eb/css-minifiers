@@ -10,11 +10,9 @@ test('integration tests', function (t) {
     t.plan(Object.keys(minifiers).length);
 
     Object.keys(minifiers).forEach(function (minifier) {
-        t.equal(
-            minifiers[minifier](css),
-            expected,
-            'should minify css with ' + minifier
-        );
+        Promise.resolve(minifiers[minifier](css)).then(function (css) {
+            t.equal(css, expected, 'should minify css with ' + minifier);
+        });
     });
 });
 
@@ -23,8 +21,9 @@ test('benchmark tests', function (t) {
 
     Object.keys(minifiers).forEach(function (m) {
         var minifier = minifiers[m];
-        var benchmark = minifier.bench(css);
-        t.ok(benchmark, minifier + ' took ' + benchmark);
+        Promise.resolve(minifier.bench(css)).then(function (time) {
+            t.ok(time, minifier + ' took ' + time);
+        });
     });
 });
 

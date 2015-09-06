@@ -7,21 +7,23 @@ function Engine (name, fn) {
         return new Engine();
     }
     this.name = name;
-    this.func = fn || require(this.name);
+    this.func = fn;
 
     var exports = this.func;
     exports.version = this._getKey('version');
     exports.url = this._getKey('homepage');
     exports.toString = this.toString.bind(this);
-    exports.bench = this.measure.bind(this);
+
+    exports.bench = function (css, precise) {
+        var start = process.hrtime();
+        return new Promise(function (resolve) {
+            return Promise.resolve(fn(css)).then(function () {
+                resolve(pretty(process.hrtime(start), {precise: precise}));
+            });
+        });
+    };
 
     return exports;
-}
-
-Engine.prototype.measure = function (css, precise) {
-    var start = process.hrtime();
-    this.func(css);
-    return pretty(process.hrtime(start), { precise: precise });
 }
 
 Engine.prototype._getKey = function (key) {
