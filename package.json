@@ -26,7 +26,7 @@
   "dependencies": {
     "bulk-require": "^0.2.1",
     "clean-css": "^3.4.x",
-    "crass": "^0.7.x",
+    "crass": "^0.10.x",
     "css-condense": "^0.1.x",
     "csso": "^1.4.x",
     "cssnano": "^3.3.x",
