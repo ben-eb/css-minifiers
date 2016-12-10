@@ -12,6 +12,8 @@ test('integration tests', function (t) {
     Object.keys(minifiers).forEach(function (minifier) {
         Promise.resolve(minifiers[minifier](css)).then(function (css) {
             t.equal(css, expected, 'should minify css with ' + minifier);
+        }, function (err) {
+            t.fail('Failure from engine "' + minifier + '": ' + String(err));
         });
     });
 });
@@ -23,6 +25,8 @@ test('benchmark tests', function (t) {
         var minifier = minifiers[m];
         Promise.resolve(minifier.bench(css)).then(function (time) {
             t.ok(time, minifier + ' took ' + time);
+        }, function (err) {
+            t.fail('Failure from engine "' + minifier + '": ' + String(err));
         });
     });
 });
