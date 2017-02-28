@@ -16,9 +16,11 @@ function Engine (name, fn) {
 
     exports.bench = function (css, precise) {
         var start = process.hrtime();
-        return new Promise(function (resolve) {
-            return Promise.resolve(fn(css)).then(function () {
+        return new Promise(function (resolve, reject) {
+            Promise.resolve(fn(css)).then(function () {
                 resolve(pretty(process.hrtime(start), {precise: precise}));
+            }, function (err) {
+                reject(err);
             });
         });
     };
