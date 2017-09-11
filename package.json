@@ -38,6 +38,7 @@
     "ncss": "^1.1.x",
     "pretty-hrtime": "^1.0.1",
     "sqwish": "^0.2.x",
+    "uglifycss": "^0.0.27",
     "ycssmin": "^1.0.x"
   },
   "devDependencies": {
